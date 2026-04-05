@@ -1,16 +1,43 @@
-## Hi there 👋
+# Fernando Corcuera
 
-<!--
-**FerCorcuera/FerCorcuera** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Data Science | Machine Learning | Quantitative Finance
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Current Focus
+
+- Credit risk modeling and classification
+- Machine learning for financial applications
+- Strengthening mathematical foundations for quantitative finance
+
+---
+
+## Notable Projects
+
+- Credit Score Classification – Credit risk modeling using machine learning
+- Bank Customer Churn Prediction – Customer behavior modeling and retention analysis
+- Capstone Project – Applied data science project
+
+---
+
+## Learning
+
+- MIT 6.0002 – Computational Thinking and Data Science
+- MITx MicroMasters in Finance (in progress)
+
+---
+
+## Tools
+
+- Python (Pandas, Scikit-learn, XGBoost, LightGBM)
+- SQL, Spark
+- AWS (SageMaker)
+- Git, Linux
+
+---
+
+## Interests
+
+- Quantitative finance
+- Machine learning systems
+- Data-driven decision making
