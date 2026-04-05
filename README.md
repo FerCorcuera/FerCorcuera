@@ -4,14 +4,6 @@ Data Science | Machine Learning | Quantitative Finance
 
 ---
 
-## Current Focus
-
-- Credit risk modeling and classification
-- Machine learning for financial applications
-- Strengthening mathematical foundations for quantitative finance
-
----
-
 ## Notable Projects
 
 - Credit Score Classification – Credit risk modeling using machine learning
@@ -32,12 +24,6 @@ Data Science | Machine Learning | Quantitative Finance
 - Python (Pandas, Scikit-learn, XGBoost, LightGBM)
 - SQL, Spark
 - AWS (SageMaker)
-- Git, Linux
+- Git
 
 ---
-
-## Interests
-
-- Quantitative finance
-- Machine learning systems
-- Data-driven decision making
