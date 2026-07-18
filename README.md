@@ -18,7 +18,8 @@ Currently, I'm revisiting MIT OpenCourseWare topics in:
 - data science,
 - probability,
 - mathematics,
-- and quantitative finance,
+- and quantitative finance (Probability theory, stochastic processes, Lineal Algebra, etc),
+- C++
 
 while documenting my learning process and experiments through personal projects and repositories.
 
@@ -27,6 +28,7 @@ while documenting my learning process and experiments through personal projects 
 ## Tools & Technologies
 
 - Python (Pandas, Scikit-learn, XGBoost, LightGBM)
+- Learning C++
 - SQL & Spark
 - AWS (SageMaker)
 - Git & GitHub
