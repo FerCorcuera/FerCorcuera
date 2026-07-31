@@ -1,0 +1,222 @@
+    %-----------------------------------------------------------------------------------------------------------------------------------------------%
+    %	The MIT License (MIT)
+    %
+    %	Copyright (c) 2021 Jitin Nair
+    %
+    %	Permission is hereby granted, free of charge, to any person obtaining a copy
+    %	of this software and associated documentation files (the "Software"), to deal
+    %	in the Software without restriction, including without limitation the rights
+    %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    %	copies of the Software, and to permit persons to whom the Software is
+    %	furnished to do so, subject to the following conditions:
+    %	
+    %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    %	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    %	THE SOFTWARE.
+    %	
+    %
+    %-----------------------------------------------------------------------------------------------------------------------------------------------%
+    
+    %----------------------------------------------------------------------------------------
+    %	DOCUMENT DEFINITION
+    %----------------------------------------------------------------------------------------
+    
+    % article class because we want to fully customize the page and not use a cv template
+    \documentclass[9pt]{article}
+    %----------------------------------------------------------------------------------------
+    %	FONT
+    %----------------------------------------------------------------------------------------
+    
+    % % fontspec allows you to use TTF/OTF fonts directly
+    % \usepackage{fontspec}
+    % \defaultfontfeatures{Ligatures=TeX}
+    
+    % % modified for ShareLaTeX use
+    % \setmainfont[
+    % SmallCapsFont = Fontin-SmallCaps.otf,
+    % BoldFont = Fontin-Bold.otf,
+    % ItalicFont = Fontin-Italic.otf
+    % ]
+    % {Fontin.otf}
+    
+    %----------------------------------------------------------------------------------------
+    %	PACKAGES
+    %----------------------------------------------------------------------------------------
+    \usepackage{url}
+    \usepackage{parskip} 	
+    
+    %other packages for formatting
+    \RequirePackage{color}
+    \RequirePackage{graphicx}
+    \usepackage[usenames,dvipsnames]{xcolor}
+    \usepackage[scale=0.9]{geometry}
+    
+    
+    %tabularx environment
+    \usepackage{tabularx}
+    
+    %for lists within experience section
+    \usepackage{enumitem}
+    
+    % centered version of 'X' col. type
+    \newcolumntype{C}{>{\centering\arraybackslash}X} 
+    
+    %to prevent spillover of tabular into next pages
+    \usepackage{supertabular}
+    \usepackage{tabularx}
+    \newlength{\fullcollw}
+    \setlength{\fullcollw}{0.47\textwidth}
+    
+    %custom \section
+    \usepackage{titlesec}				
+    \usepackage{multicol}
+    \usepackage{multirow}
+    
+    %CV Sections inspired by: 
+    %http://stefano.italians.nl/archives/26
+    \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+    \titlespacing{\section}{0pt}{6pt}{6pt}
+    
+    %for publications
+    \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+    
+    %Setup hyperref package, and colours for links
+    \usepackage[unicode, draft=false]{hyperref}
+    \definecolor{linkcolour}{rgb}{0,0.2,0.6}
+    \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+    \addbibresource{citations.bib}
+    \setlength\bibitemsep{1em}
+    
+    %for social icons
+    \usepackage{fontawesome5}
+    
+    %debug page outer frames
+    %\usepackage{showframe}
+    
+    
+    % job listing environments
+    \newenvironment{jobshort}[2]
+        {
+        \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill &  #2 \\[2pt]
+        \end{tabularx}
+        }
+        {
+        }
+    
+    \newenvironment{joblong}[2]
+        {
+        \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill &  #2 \\[3.75pt]
+        \end{tabularx}
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]   
+        }
+        {
+        \end{itemize}
+        \end{minipage}    
+        }
+    
+    
+    
+    %----------------------------------------------------------------------------------------
+    %	BEGIN DOCUMENT
+    %----------------------------------------------------------------------------------------
+    \begin{document}
+    
+    % non-numbered pages
+    \pagestyle{empty} 
+    
+    %----------------------------------------------------------------------------------------
+    %	TITLE
+    %----------------------------------------------------------------------------------------
+    
+    % \begin{tabularx}{\linewidth}{ @{}X X@{} }
+    % \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+    % \raisebox{-0.05\height}\faGithub\ username \ | \
+    % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+    % \end{tabularx}
+    
+    \begin{tabularx}{\linewidth}{@{} C @{}}
+    \Huge{Fernando Corcuera} \\[6pt]
+    \href{https://github.com/FerCorcuera}{\raisebox{-0.05\height}\faGithub\ FerCorcuera} \ $|$ \ 
+    \href{https://linkedin.com/in/FernandoCorcuera}{\raisebox{-0.05\height}\faLinkedin\ FernandoCorcuera} \ $|$ \ 
+    \href{mailto:fercorcuera@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ fercorcuera21@outlook.com} \ $|$ \ 
+    \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +51 953 630 577} \\
+    \end{tabularx}
+    \vspace{-20pt}
+    %----------------------------------------------------------------------------------------
+    % EXPERIENCE SECTIONS
+    %----------------------------------------------------------------------------------------
+    
+    %Interests/ Keywords/ Summary
+    \section*{}
+    Economist specialized in data science with experience in the development and deployment of machine learning algorithms in the Peruvian banking sector. Solid academic background in econometrics, stochastic processes, and statistical modeling applied to financial data, as well as knowledge and experience in implementing these concepts in analytical systems using Python and cloud architectures. Focused on advancing the mathematical formalization behind quantitative models and their application to financial engineering systems.
+    %experience
+    \vspace{-4.5pt}
+    \section*{Professional Experience}
+    \vspace{3.5pt}
+    
+    \textbf{Banco de Crédito del Perú - Culqi} \hfill Lima, Perú \\
+    \textit{Data Scientist} \hfill \textit{Jul 2025 -- Present}
+    \vspace{-2pt}
+    \begin{itemize}[leftmargin=1em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]
+    \item Designed and implemented supervised machine learning frameworks for churn prediction and fraud detection in Python, incorporating gradient boosting methods (e.g., XGBoost and CatBoost) and baseline statistical models to ensure performance benchmarking, model stability, and interpretability.
+    \item Improved churn prediction performance (Recall: 0.50→0.77, Precision: 0.55→0.67) by applying temporal cross-validation schemes, addressing class imbalance, and refining SQL-based feature engineering pipelines to enhance model generalization.
+    \item Developed time-series forecasting models (e.g., Prophet and autoregressive baselines) and applied dimensionality reduction techniques (PCA) to improve signal extraction in high-dimensional financial datasets, leveraging distributed data processing with PySpark for large-scale data handling.
+    \item Led end-to-end deployment of ML models in batch environments using AWS SageMaker architecture, MLflow, and GitHub, ensuring reproducibility, experiment tracking, and governance standards across the model lifecycle.
+    \end{itemize}
+    \vspace{-2pt}
+    \textbf{Ernst \& Young Perú} \hfill Lima, Perú \\
+    \textit{Data Analyst Consultant} \hfill \textit{Sep 2024 -- Jul 2025}
+    \vspace{-2pt}
+    \begin{itemize}[leftmargin=1em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]
+    \item Developed supervised learning models in Python (Scikit-Learn, TensorFlow) for credit risk scoring and fraud detection across U.S.-based financial institutions, integrating structured financial data with engineered risk features.
+    \item Designed scalable SQL pipelines to process and validate large transactional datasets, performing anomaly detection and feature extraction for forensic financial investigations.
+    \item Implemented deep learning–based similarity detection models for image and text data, leveraging vector embeddings and efficient nearest-neighbor search (e.g., FAISS) to identify fraudulent patterns in high-dimensional datasets.
+    \end{itemize}
+    \vspace{-2pt}
+    \textit{Transfer Pricing Consultant} \hfill \textit{Sep 2023 -- Jun 2024}
+    \vspace{-2pt}
+    \begin{itemize}[leftmargin=1em, itemsep=0.8pt, topsep=1pt, parsep=0pt, partopsep=0pt]
+    \item Conducted financial benchmarking and valuation analysis for multinational banking and retail clients, utilizing Bloomberg and Refinitiv data to assess market returns, loan structures, and interest rate comparables (e.g., LIBOR-based benchmarks).
+    \item Performed macro-financial analysis of corporate financial statements and cross-border transactions, supporting M\&A and intercompany pricing assessments under international regulatory frameworks.
+    \end{itemize}
+    %----------------------------------------------------------------------------------------
+    %	EDUCATION
+    %----------------------------------------------------------------------------------------
+
+    \section{Education}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+    
+    2025 (ongoing) & \textbf{MITx – Mathematical Methods for Quantitative Finance} \\
+                   & Stochastic Calculus, Linear Algebra, Probability Theory in Finance \\[6pt]
+    
+    2025 & \textbf{National University of Engineering (UNI)} \\
+         & Specialization in Data Science (188 hours) -- Final Grade: 18.6/20 \\
+         & Statistical Learning, Bayesian Methods, Deep Learning \\[6pt]
+    
+
+    2017--2023 & \textbf{Universidad Peruana de Ciencias Aplicadas (UPC)} \\
+               & Bachelor’s Degree in Economics -- Top 20\% of class \\
+               & Relevant Coursework: Macroeconometrics, Stochastic Processes, Financial mathematics \\
+    
+    \end{tabularx}
+
+    \section{Technical Skills}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+    
+    Programming & Python (NumPy, pandas, scikit-learn, XGBoost, TensorFlow, PySpark, Prophet), SQL, Spark, \textit{C++ (foundations)} \\
+    
+    Quantitative & Statistical Learning, Econometrics, Time-Series Modeling, PCA, Bayesian Methods \\
+    
+    ML Systems & AWS SageMaker, MLflow, Git, Distributed Data Processing \\
+    
+    \end{tabularx}
+    
+    \end{document}
+    
