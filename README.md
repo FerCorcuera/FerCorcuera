@@ -34,6 +34,11 @@ https://bcrp-analytics.vercel.app
 
 ---
 
+## Currently reading:
+
+- Introducing C++ by Francis Buontempo
+- Linear algebra done right by Sheldon Axler
+
 ## Tools & Technologies
 
 - **Python:** Pandas, Scikit-learn, XGBoost, LightGBM
